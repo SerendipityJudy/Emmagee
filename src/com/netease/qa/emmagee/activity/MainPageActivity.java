@@ -51,10 +51,10 @@ import com.netease.qa.emmagee.utils.Programe;
 
 /**
  * Main Page of Emmagee
- * 
+ * 此app的主页
  * @author andrewleo
  */
-public class MainPageActivity extends Activity {
+public class MainPageActivity extends Activity { //扩展了Activity类并覆盖了方法onCreate(Bundle savedInstanceState)
 
 	private static final String LOG_TAG = "Emmagee-" + MainPageActivity.class.getSimpleName();
 
@@ -75,12 +75,13 @@ public class MainPageActivity extends Activity {
 	private LinearLayout layBtnSet;
 	private Long mExitTime = (long) 0;
 
+	//当Activity的实例被启动时调用的第一个方法。一般情况下，都覆盖该方法作为应用程序的入口点，在这里做一些初始化数据、设置用户界面等工作
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		Log.i(LOG_TAG, "MainActivity::onCreate");
-		super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);  //调用其父类的方法onCreate
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.mainpage);
+		setContentView(R.layout.mainpage); //将Activity的界面视图绑定到当前的Activity中
 		
 		initTitleLayout();
 		processInfo = new ProcessInfo();
@@ -179,12 +180,14 @@ public class MainPageActivity extends Activity {
 		}
 	}
 
+	//在onCreate()后被调用，或者在Activity从Stopped状态转换为Actived状态时被调用
 	@Override
 	protected void onStart() {
 		Log.d(LOG_TAG, "onStart");
 		super.onStart();
 	}
 
+	//在Activity从Paused状态转换到Actived状态时被调用
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -196,7 +199,7 @@ public class MainPageActivity extends Activity {
 
 	/**
 	 * wait for test application started.
-	 * 
+	 * 等待被测试应用程序启动
 	 * @param packageName
 	 *            package name of test application
 	 */
@@ -225,7 +228,7 @@ public class MainPageActivity extends Activity {
 
 	/**
 	 * show a dialog when click return key.
-	 * 
+	 * 显示点击返回键后的对话框
 	 * @return Return true to prevent this event from being propagated further,
 	 *         or false to indicate that you have not handled this event and it
 	 *         should continue to be propagated.
@@ -325,7 +328,7 @@ public class MainPageActivity extends Activity {
 
 	/**
 	 * save status of all installed processes
-	 * 
+	 * 保存所有存储过程的状态
 	 * @author andrewleo
 	 */
 	static class Viewholder {
@@ -334,6 +337,7 @@ public class MainPageActivity extends Activity {
 		RadioButton rdoBtnApp;
 	}
 
+	//在被结束时调用，它是被结束时调用的最后一个方法，一般做释放资源、清理内存等工作
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();

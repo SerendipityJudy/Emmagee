@@ -43,7 +43,7 @@ import com.netease.qa.emmagee.utils.Settings;
 
 /**
  * Setting Page of Emmagee
- * 
+ * 此应用程序的设置页
  * @author andrewleo
  */
 public class SettingsActivity extends Activity {
@@ -181,7 +181,7 @@ public class SettingsActivity extends Activity {
 
 	/**
 	 * upgrade app to get root permission
-	 * 
+	 * 升级app得到root许可
 	 * @return is root successfully
 	 */
 	public static boolean upgradeRootPermission(String pkgCodePath) {

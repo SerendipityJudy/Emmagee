@@ -42,6 +42,7 @@ public class AboutActivity extends Activity {
 
 	private TextView appVersion;
 
+	//创建Activity
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		Log.i(LOG_TAG, "onCreate");
@@ -69,7 +70,7 @@ public class AboutActivity extends Activity {
 	}
 	
 	/**
-	 * get app version
+	 * get app version 得到app的版本
 	 * @return app version
 	 */
 	public String getVersion() {
@@ -89,6 +90,7 @@ public class AboutActivity extends Activity {
 		super.finish();
 	}
 
+	//销毁此Activity
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();

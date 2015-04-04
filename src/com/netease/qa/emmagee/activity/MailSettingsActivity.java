@@ -40,7 +40,7 @@ import com.netease.qa.emmagee.utils.Settings;
 
 /**
  * Mail Setting Page of Emmagee
- * 
+ * 此应用程序的邮件设置页
  * @author andrewleo
  */
 public class MailSettingsActivity extends Activity {
@@ -151,7 +151,7 @@ public class MailSettingsActivity extends Activity {
 
 	/**
 	 * check if mail configurations are available
-	 * 
+	 * 检查邮件设置是否可用
 	 * @param sender
 	 * @param recipients
 	 * @param smtp
@@ -170,7 +170,7 @@ public class MailSettingsActivity extends Activity {
 
 	/**
 	 * check mail format
-	 * 
+	 * 检查邮件格式
 	 * @return true: valid email address
 	 */
 	private boolean checkMailFormat(String mail) {
