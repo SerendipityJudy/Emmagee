@@ -86,6 +86,7 @@ public class AboutActivity extends Activity {
 	}
 
 	@Override
+	//可以省去
 	public void finish() {
 		super.finish();
 	}

@@ -111,6 +111,7 @@ public class SettingsActivity extends Activity {
 			public void onClick(View arg0) {
 				SettingsActivity.this.finish();
 				Intent intent = new Intent();
+				//页面跳转
 				intent.setClass(SettingsActivity.this, MainPageActivity.class);
 				startActivity(intent);
 			}
